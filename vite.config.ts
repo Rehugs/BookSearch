@@ -68,16 +68,16 @@ export default defineConfig(() => {
             appDescription: description,
             icons: {
               favicons: {
-                source: 'icon.png'
+                source: './public/icon.png'
               },
               android: {
-                source: 'icon.png'
+                source: './public/icon.png'
               },
               appleStartup: {
-                source: 'icon.png'
+                source: './public/icon.png'
               },
               appleIcon: {
-                source: 'icon.png'
+                source: './public/icon.png'
               }
             }
           })
