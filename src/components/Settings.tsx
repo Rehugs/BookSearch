@@ -84,7 +84,9 @@ const Settings: React.FC = () => {
                   element={
                     <Textarea
                       {...register('ipfs_gateways')}
+                      aria-label="minimum height"
                       aria-invalid={errors.ipfs_gateways ? 'true' : 'false'}
+                      minRows={16}
                     />
                   }
                 />
