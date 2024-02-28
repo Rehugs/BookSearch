@@ -75,7 +75,7 @@ const App: React.FC = () => {
 
         <Spacer />
         <Footer>
-          <ExternalLink href={repository}>Book Searcher</ExternalLink> v{version} ©2024
+          Book Searcher v{version} ©2024
         </Footer>
       </Flex>
     </RootContext.Provider>
