@@ -2,7 +2,6 @@
   "en": {
     "translation": {
       "nav": {
-        "repository": "GitHub Repository",
         "toggle_dark": "Toggle to Dark Mode",
         "toggle_light": "Toggle to Light Mode",
         "toggle_language": "Toggle Language"
@@ -60,7 +59,6 @@
   "zh-CN": {
     "translation": {
       "nav": {
-        "repository": "GitHub 仓库",
         "toggle_dark": "切换到暗黑模式",
         "toggle_light": "切换到亮色模式",
         "toggle_language": "切换语言"
@@ -118,7 +116,6 @@
   "fr": {
     "translation": {
       "nav": {
-        "repository": "Dépôt GitHub",
         "toggle_dark": "Basculer en mode sombre",
         "toggle_light": "Basculer en mode clair",
         "toggle_language": "Basculer la langue"
@@ -176,7 +173,6 @@
   "it": {
     "translation": {
       "nav": {
-        "repository": "Repo GitHub",
         "toggle_dark": "Modalità scura",
         "toggle_light": "Modalità chiara",
         "toggle_language": "Lingua"

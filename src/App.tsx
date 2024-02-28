@@ -1,4 +1,4 @@
-import { Flex, HStack, Icon, IconButton, Spacer } from '@chakra-ui/react';
+import { Flex, HStack, Spacer } from '@chakra-ui/react';
 import React, { Suspense, useState } from 'react';
 import { SkipNavContent, SkipNavLink } from '@chakra-ui/skip-nav';
 
@@ -63,14 +63,6 @@ const App: React.FC = () => {
         <SkipNavLink>Skip to content</SkipNavLink>
         <Header title="Book Searcher" onClick={() => setSearchComponentKey((key) => key + 1)}>
           <HStack spacing={{ base: 1, md: 2 }}>
-            <IconButton
-              as={ExternalLink}
-              aria-label={t('nav.repository')}
-              title={t('nav.repository') ?? ''}
-              href={repository}
-              variant="ghost"
-              icon={<Icon as={FaGithub} boxSize={5} />}
-            />
             <LanguageSwitch />
             <ColorModeSwitch />
             <Suspense>
@@ -83,7 +75,7 @@ const App: React.FC = () => {
 
         <Spacer />
         <Footer>
-          <ExternalLink href={repository}>Book Searcher</ExternalLink> v{version} ©2023
+          <ExternalLink href={repository}>Book Searcher</ExternalLink> v{version} ©2024
         </Footer>
       </Flex>
     </RootContext.Provider>
