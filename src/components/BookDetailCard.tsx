@@ -24,7 +24,6 @@ import RootContext from '../store';
 import ExternalLink from './ExternalLink';
 import { Book } from '../scripts/searcher';
 import { getDownloadLinkFromIPFS } from '../scripts/ipfs';
-import { getCoverImageUrl, getMd5CoverImageUrl, white_pic } from '../scripts/cover';
 import IpfsDownloadButton from './IpfsDownloadButton';
 
 const Preview = React.lazy(() => import('./Preview'));
@@ -68,7 +67,6 @@ const BookDetailView: React.FC<BookDetailViewProps> = ({ book }) => {
     pages,
     isbn,
     ipfs_cid,
-    cover_url,
     md5
   } = book;
   return (
@@ -111,21 +109,6 @@ const BookDetailView: React.FC<BookDetailViewProps> = ({ book }) => {
         <Divider />
         <CardBody>
           <Flex direction={{ base: 'column', md: 'row' }}>
-            <Image
-              referrerPolicy="no-referrer"
-              borderRadius="lg"
-              width="auto"
-              maxWidth="150px"
-              objectFit="contain"
-              src={getCoverImageUrl(cover_url)}
-              onError={({ currentTarget }) => {
-                currentTarget.src = getMd5CoverImageUrl(book.md5);
-                currentTarget.onerror = () => {
-                  currentTarget.style.display = 'none';
-                  currentTarget.src = white_pic;
-                };
-              }}
-            />
             <Stack pl={{ base: undefined, md: '20px' }} pt="10px" flex="1">
               <SimpleGrid columns={{ sm: 1, md: 3, lg: 4 }} spacing={{ base: 2, md: 4 }}>
                 <Description name={`${t('book.id') ?? 'ID'}: `}>{id}</Description>

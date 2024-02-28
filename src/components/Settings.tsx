@@ -86,7 +86,6 @@ const Settings: React.FC = () => {
                       {...register('ipfs_gateways')}
                       rows={12}
                       aria-invalid={errors.ipfs_gateways ? 'true' : 'false'}
-                      defaultValue={`https://ipfs.io\nhttps://dweb.link\nhttps://cf-ipfs.com\nhttps://cloudflare-ipfs.com`}
                     />
                   }
                 />

@@ -10,7 +10,6 @@ export interface Book {
   pages?: number;
   isbn: string;
   ipfs_cid: string;
-  cover_url?: string;
   md5?: string;
 }
 

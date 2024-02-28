@@ -26,7 +26,6 @@ import {
 import { useTranslation } from 'react-i18next';
 import { Book } from '../scripts/searcher';
 import { filesize as formatFileSize } from 'filesize';
-import { getCoverImageUrl, getMd5CoverImageUrl, white_pic } from '../scripts/cover';
 import { OnPaginationChange } from './DataTable';
 import Pagination from './Pagination';
 import getColorScheme from '../data/color';
@@ -108,21 +107,6 @@ export default function BookCardList<Data extends object>({
             direction="row"
             overflow="hidden"
           >
-            <Image
-              referrerPolicy="no-referrer"
-              width="auto"
-              maxW="min(24%, 100px)"
-              objectFit="cover"
-              src={getCoverImageUrl(book.cover_url)}
-              onError={({ currentTarget }) => {
-                currentTarget.src = getMd5CoverImageUrl(book.md5);
-                currentTarget.onerror = () => {
-                  currentTarget.style.display = 'none';
-                  currentTarget.src = white_pic;
-                };
-              }}
-            />
-
             <CardBody alignSelf="center">
               <Flex>
                 <Box>

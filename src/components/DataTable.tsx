@@ -241,11 +241,7 @@ export default function DataTable<Data extends object>({
                       isNumeric={meta?.isNumeric ?? false}
                       borderBottom="none"
                       overflow="hidden"
-                      padding={
-                        cell.column.id == 'cover_url' || cell.column.id == 'ipfs_cid'
-                          ? '0'
-                          : undefined
-                      }
+                      padding={cell.column.id == 'ipfs_cid' ? '0' : undefined}
                       textOverflow={cell.id.endsWith('title') ? 'ellipsis' : 'hidden'}
                       title={(cell.getValue() as any)?.toString()}
                     >

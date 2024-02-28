@@ -21,7 +21,6 @@ import RootContext from '../store';
 import { Book } from '../scripts/searcher';
 
 import BookDetailView from './BookDetailCard';
-import { getCoverImageUrl, getMd5CoverImageUrl, white_pic } from '../scripts/cover';
 import IpfsDownloadButton from './IpfsDownloadButton';
 
 const columnHelper = createColumnHelper<Book>();
@@ -57,58 +56,6 @@ const BooksView: React.FC<BooksViewProps> = ({ books, pagination, setPagination,
   const rootContext = useContext(RootContext);
 
   const columns = [
-    columnHelper.accessor('cover_url', {
-      header: '',
-      cell: (cell) => {
-        const cover = cell.getValue();
-        const md5 = cell.row.original.md5;
-        return (
-          <Popover
-            trigger="hover"
-            closeDelay={0}
-            openDelay={0}
-            placement="right"
-            autoFocus={false}
-            matchWidth={true}
-          >
-            <PopoverTrigger>
-              <Image
-                referrerPolicy="no-referrer"
-                htmlWidth="70%"
-                src={getCoverImageUrl(cover)}
-                onError={({ currentTarget }) => {
-                  currentTarget.src = getMd5CoverImageUrl(md5);
-                  currentTarget.onerror = () => {
-                    currentTarget.style.display = 'none';
-                    currentTarget.src = white_pic;
-                  };
-                }}
-              />
-            </PopoverTrigger>
-            <PopoverContent width="fit-content">
-              <PopoverArrow />
-              <PopoverBody width="200px" padding={[0, 0]}>
-                <Image
-                  htmlWidth="200px"
-                  referrerPolicy="no-referrer"
-                  src={getCoverImageUrl(cover)}
-                  onError={({ currentTarget }) => {
-                    currentTarget.src = getMd5CoverImageUrl(md5);
-                    currentTarget.onerror = () => {
-                      currentTarget.style.display = 'none';
-                      currentTarget.src = white_pic;
-                    };
-                  }}
-                />
-              </PopoverBody>
-            </PopoverContent>
-          </Popover>
-        );
-      },
-      enableColumnFilter: false,
-      enableSorting: false,
-      meta: { width: '30px', breakpoint: 'md' }
-    }),
     columnHelper.accessor('title', {
       header: t('book.title') ?? 'Title',
       sortingFn: 'text',
