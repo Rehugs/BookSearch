@@ -6,7 +6,11 @@ Book Searcher can index metadata for over 10 million books in one minute, and se
 
 ### Deploy with Vercel
 
-<div align="center">[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Rehugs/BookSearch/tree/master/&project-name=book-search&repository-name=book-search)</div>
+<div align=center>
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Rehugs/BookSearch/tree/master/&project-name=book-search&repository-name=book-search)
+
+</div>
 
 Deploying the frontend to Vercel to speed up loading of static resources and provide a reverse proxy to the image service.
 

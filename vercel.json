@@ -7,14 +7,6 @@
     {
       "source": "/search",
       "destination": "https://book-searcher.eu.org/search"
-    },
-    {
-      "source": "/libgen/:path*",
-      "destination": "https://library.lol/:path*"
-    },
-    {
-      "source": "/zlibrary/:path*",
-      "destination": "https://static.1lib.sk/:path*"
     }
   ],
   "headers": [
