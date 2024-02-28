@@ -9,8 +9,8 @@
     "dev2": "vite -m development.lite",
     "build": "vite build",
     "vercel-build": "vite build -m vercel",
-    "preview": "vite preview",
     "check": "tsc --noEmit --skipLibCheck",
+    "preview": "vite preview",
     "fmt": "prettier --write .",
     "fmt:check": "prettier --check ."
   },

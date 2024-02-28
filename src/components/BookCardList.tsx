@@ -136,7 +136,7 @@ export default function BookCardList<Data extends object>({
                     {book.publisher != undefined ? book.publisher : ''}
                   </Text>
                   <div>
-                    {rendererTag(book.extension)} {rendererTag(book.language)}{' '}
+                    {(rendererTagbook.extension)} {rendererTag(book.language)}{' '}
                     {formatFileSize(book.filesize) as string}
                   </div>
                 </Box>
