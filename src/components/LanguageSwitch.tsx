@@ -30,8 +30,6 @@ const LanguageSwitch: React.FC = () => {
           type="radio"
           onChange={(value) => i18n.changeLanguage(value as string)}
         >
-          <MenuItemOption value="it">Italian</MenuItemOption>
-          <MenuItemOption value="fr">French</MenuItemOption>
           <MenuItemOption value="en">English</MenuItemOption>
           <MenuItemOption value="zh-CN">简体中文</MenuItemOption>
         </MenuOptionGroup>
