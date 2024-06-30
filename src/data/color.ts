@@ -23,9 +23,7 @@ const extensionColorSchemes: { [key: string]: string } = {
 
 const languageColorSchemes: { [key: string]: string } = {
   english: 'blue',
-  chinese: 'red',
-  french: 'blue',
-  italian: 'green'
+  chinese: 'red'
 };
 
 export default function getColorScheme(key: string) {

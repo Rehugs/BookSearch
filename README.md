@@ -4,6 +4,16 @@ Easy and blazing-fast book searcher, create and search your private library.
 
 Book Searcher can index metadata for over 10 million books in one minute, and search in 30µs.
 
+### Deploy with Vercel
+
+<div align=center>
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Rehugs/BookSearch/tree/master/&project-name=book-search&repository-name=book-search)
+
+</div>
+
+Deploying the frontend to Vercel to speed up loading of static resources and provide a reverse proxy to the image service.
+
 ### Original Search Api
 
 You can search by the following fields:

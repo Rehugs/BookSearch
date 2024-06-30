@@ -41,9 +41,7 @@ const extensionOptions = [
 
 const languageOptions = [
   { value: 'English', label: 'English', colorScheme: 'blue' },
-  { value: 'Chinese', label: 'Chinese', colorScheme: 'red' },
-  { value: 'French', label: 'French', colorScheme: 'blue' },
-  { value: 'Italian', label: 'Italian', colorScheme: 'green' }
+  { value: 'Chinese', label: 'Chinese', colorScheme: 'red' }
 ];
 
 const Search: React.FC<SearchProps> = ({ setBooks, pagination, setPageCount, resetPageIndex }) => {
